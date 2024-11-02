@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "minecraft-2",
+	"version": "${version}",
+	"name": "minecraft 2",
+	"description": "Making Minecraft a better game.",
+	"authors": [
+		"WorkSteve7284"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/minecraft-2/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.modid.Minecraft2"
+		],
+		"client": [
+			"name.modid.Minecraft2Client"
+		],
+		"fabric-datagen": [
+			"name.modid.Minecraft2DataGenerator"
+		]
+	},
+	"mixins": [
+		"minecraft-2.mixins.json",
+		{
+			"config": "minecraft-2.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.3",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
